@@ -1,4 +1,4 @@
-const userModel = require('../models/user');
+const userModel = require('../Models/user.model');
 
 const userController = {
     getUsers: async () => {

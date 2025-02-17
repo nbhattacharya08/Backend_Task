@@ -4,7 +4,8 @@
   "description": "Backend Task for Intern",
   "main": "app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/nbhattacharya08/Backend_Task/issues"
   },
-  "homepage": "https://github.com/nbhattacharya08/Backend_Task#readme"
+  "homepage": "https://github.com/nbhattacharya08/Backend_Task#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9"
+  }
 }
