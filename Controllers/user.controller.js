@@ -7,11 +7,21 @@ const userController = {
     getUser: async (id) => {
         return await userModel.findById(id);
     },
-    addUser: async (user) => {
-        return await userModel.create(user);
+    createUser: async (user) => {
+        userObject = {
+            name: user.name,
+            email: user.email,
+            password: user.password
+        }
+        return await userModel.create(userObject);
     },
     updateUser: async (id, user) => {
-        return await userModel.findByIdAndUpdate(id, user, { new: true });
+        userChanged = {
+            name: user.name,
+            email: user.email,
+            password: user.password
+        }
+        return await userModel.findByIdAndUpdate(id, userChanged);
     },
     deleteUser: async (id) => {
         return await userModel.findByIdAndDelete(id);

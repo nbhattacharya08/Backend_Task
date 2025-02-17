@@ -3,6 +3,6 @@ const router = express.Router();
 
 const userRouter = require('./users.routes');
 
-router.get('/api', userRouter);
+router.use('/api', userRouter);
 
 module.exports = router;
