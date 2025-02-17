@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend Task for Intern",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbhattacharya08/Backend_Task.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbhattacharya08/Backend_Task/issues"
+  },
+  "homepage": "https://github.com/nbhattacharya08/Backend_Task#readme"
+}
