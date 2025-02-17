@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const usersController = require('../controllers/users.controller');
+const indexController = require('../controllers/index.controller');
+const usersController = indexController.user;
 
 //Get all Users
 router.get('/users', (req, res) => {
