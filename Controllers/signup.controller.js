@@ -3,30 +3,21 @@ const signupModel = indexModel.signupModel;
 const bcrypt = require('bcrypt');
 
 const signupController = {
-    create: async (req, res) => {
-        try {
+    create: async (user) => {
             const salt = await bcrypt.genSalt(10);
-            const hash = await bcrypt.hash(req.body.password, salt);
+            const hash = await bcrypt.hash(user.password, salt);
             const signup = {
-                name: req.body.name,
-                email: req.body.email,
+                name: user.name,
+                email: user.email,
                 password: hash,
-                role: req.body.role
+                role: user.role
             }
-            const data = await signupModel.create(signup);
-            res.status(201).json(data);
-        } catch (error) {
-            res.status(400).json(error);
-        }
+            return await signupModel.create(signup);
     },
-    get: async (req, res) => {
-        try {
-            email = req.body.email;
-            const data = await signupModel.find({email: email});
-            res.status(200).json(data);
-        } catch (error) {
-            res.status(400).json(error);
-        }
+    get: async (user) => {
+            email = user.email;
+            return await signupModel.find({email: email});
+
     },
 }
 
