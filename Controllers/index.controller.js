@@ -1,5 +1,5 @@
 const userController = require('./user.controller');
-const signUpController = require('./signUp.controller');
+const signUpController = require('./signup.controller');
 
 const indexController = {
     user: userController,

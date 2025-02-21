@@ -1,4 +1,5 @@
-const signupModel = require('../Models/index.model').signup;
+const indexModel = require('../Models/index.model');
+const signupModel = indexModel.signupModel;
 const bcrypt = require('bcrypt');
 
 const signupController = {
