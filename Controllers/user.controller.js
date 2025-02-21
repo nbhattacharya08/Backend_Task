@@ -1,4 +1,3 @@
-const bcrypt = require('bcrypt');
 const userModel = require('../Models/user.model');
 
 const userController = {
@@ -9,12 +8,9 @@ const userController = {
         return await userModel.findById(id);
     },
     createUser: async (user) => {
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(user.password, saltRounds);
         const userObject = {
             name: user.name,
             email: user.email,
-            password: hashedPassword,
             Role: user.Role
         };
         return await userModel.create(userObject);
@@ -23,7 +19,7 @@ const userController = {
         const userChanged = {
             name: user.name,
             email: user.email,
-            password: user.password
+            role: user.role
         };
         return await userModel.findByIdAndUpdate(id, userChanged);
     },

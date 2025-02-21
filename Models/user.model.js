@@ -9,9 +9,6 @@ let User = new Schema({
     email: {
         type: String
     },
-    password: {
-        type: String
-    },
     role: {
         type: String
     },
