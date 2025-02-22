@@ -1,9 +1,10 @@
 const indexModel = require('../Models/index.model');
-const signupModel = indexModel.signupModel;
+const signupModel = indexModel.signUp;
 const bcrypt = require('bcrypt');
 
 const signupController = {
     create: async (user) => {
+            console.log(user);
             const salt = await bcrypt.genSalt(10);
             const hash = await bcrypt.hash(user.password, salt);
             const signup = {
@@ -16,7 +17,7 @@ const signupController = {
     },
     get: async (user) => {
             email = user.email;
-            return await signupModel.find({email: email});
+            return await signupModel.findOne({email: email});
 
     },
 }

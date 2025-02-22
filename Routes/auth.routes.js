@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const indexController = require('../controllers/index.controller');
-const signupController = indexController.signup;
-const indexMiddleware = require('../middlewares/index.middleware');
+const indexController = require('../Controllers/index.controller');
+const signupController = indexController.signUp;
+const indexMiddleware = require('../Middleware/index.middleware');
 const loginMiddleware = indexMiddleware.login;
 
-router.post('/auth/signup', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try{
         const data = await signupController.create(req.body);
         res.status(201).json(data);
@@ -15,6 +15,6 @@ router.post('/auth/signup', async (req, res) => {
     }
 });
 
-router.post('/auth/login', loginMiddleware.login);
+router.post('/login', loginMiddleware);
 
 module.exports = router;

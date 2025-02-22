@@ -1,14 +1,15 @@
-const indexController = require('../controllers/index.controller');
-const signupController = indexController.signup;
+const indexController = require('../Controllers/index.controller');
+const signupController = indexController.signUp;
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 const loginMiddleware = async (req, res, next) => {
     if (req.body.email && req.body.password) {
-        const data = signupController.get(req.body);
+        const data = await signupController.get(req.body);
         if (data) {
+            console.log(req.body.password , data);
             const isMatch = await bcrypt.compare(req.body.password, data.password);
-            if (data.password === req.body.password) {
+            if (isMatch) {
                 const token = jwt.sign
                     ({
                         id: data.id,
