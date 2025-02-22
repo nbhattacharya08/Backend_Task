@@ -2,9 +2,14 @@ const express = require('express');
 const router = express.Router();
 const indexController = require('../Controllers/index.controller');
 const usersController = indexController.user;
+const indexMiddleware = require('../Middleware/index.middleware');
+const verifyTokenMiddleware = indexMiddleware.verifyToken;
+
+// Protect all routes with verifyTokenMiddleware
+router.use(verifyTokenMiddleware);
 
 // Get all Users
-router.get('/users', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const users = await usersController.getUsers();
         res.status(200).json(users);
@@ -14,7 +19,7 @@ router.get('/users', async (req, res) => {
 });
 
 // Get a User by ID
-router.get('/users/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const user = await usersController.getUser(req.params.id);
         if (user) {
@@ -28,7 +33,7 @@ router.get('/users/:id', async (req, res) => {
 });
 
 // Create a User
-router.post('/users', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const newUser = await usersController.createUser(req.body);
         res.status(201).json(newUser);
@@ -38,7 +43,7 @@ router.post('/users', async (req, res) => {
 });
 
 // Update a User
-router.put('/users/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const updatedUser = await usersController.updateUser(req.params.id, req.body);
         if (updatedUser) {
@@ -52,7 +57,7 @@ router.put('/users/:id', async (req, res) => {
 });
 
 // Delete a User
-router.delete('/users/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const deletedUser = await usersController.deleteUser(req.params.id);
         if (deletedUser) {

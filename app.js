@@ -8,7 +8,11 @@ const indexRouter = require('./Routes/index.routes');
 
 app.use(express.json());
 
-app.use('/', indexRouter);
+app.get('/', (req, res) => {
+    res.status(200).json({"ping": "pong"});
+});
+
+app.use('/api', indexRouter);
 
 const connect_db = () =>{
     username= process.env.DB_USERNAME
