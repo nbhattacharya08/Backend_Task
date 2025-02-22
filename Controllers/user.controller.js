@@ -12,7 +12,7 @@ const userController = {
         const userObject = {
             name: user.name,
             email: user.email,
-            Role: user.Role
+            role: user.role
         };
         return await userModel.create(userObject);
     },
