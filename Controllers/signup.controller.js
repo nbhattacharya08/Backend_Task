@@ -15,11 +15,6 @@ const signupController = {
             }
             return await signupModel.create(signup);
     },
-    get: async (user) => {
-            email = user.email;
-            return await signupModel.findOne({email: email});
-
-    },
 }
 
 module.exports = signupController;

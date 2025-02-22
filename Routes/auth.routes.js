@@ -2,8 +2,7 @@ const express = require('express');
 const router = express.Router();
 const indexController = require('../Controllers/index.controller');
 const signupController = indexController.signUp;
-const indexMiddleware = require('../Middleware/index.middleware');
-const loginMiddleware = indexMiddleware.login;
+const loginController = indexController.login;
 
 router.post('/signup', async (req, res) => {
     try{
@@ -15,6 +14,13 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-router.post('/login', loginMiddleware);
+router.post('/login', async (req , res) => {
+    try{
+        const data = await loginController.login(req.body);
+        res.status(200).json(data);
+    }catch(err){
+        res.status(500).json({message: err.message});
+    }
+});
 
 module.exports = router;
