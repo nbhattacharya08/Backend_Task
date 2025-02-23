@@ -12,7 +12,7 @@ const signupSchema = joi.object().keys({
         .required(),
     password: joi.string()
         .min(6)
-        .max(30)
+        .max(1000)
         .required(),
     role: joi.string()
         .valid('admin', 'user')
