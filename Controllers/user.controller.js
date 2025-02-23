@@ -15,7 +15,7 @@ const userController = {
     },
     getUser: async (req,res) => {
         try{
-            const id = req.body.id;
+            const id = new mongoose.Types.ObjectId(req.body.id);
             const user = await userModel.findById(id);
             if(user){
                 res.status(200).json(user);
@@ -50,7 +50,8 @@ const userController = {
             role: req.body.role
         };
         try{
-            const updatedUser = await userModel.findByIdAndUpdate(req.params.id, userChanged, {new: true});
+            const id = new mongoose.Types.ObjectId(req.params.id);
+            const updatedUser = await userModel.findByIdAndUpdate(id, userChanged, {new: true});
             if(updatedUser){
                 res.status(200).json(updatedUser);
             } else { req.params.id
