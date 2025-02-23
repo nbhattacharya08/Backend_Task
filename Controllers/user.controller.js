@@ -15,7 +15,8 @@ const userController = {
     },
     getUser: async (req,res) => {
         try{
-            const id = new mongoose.Types.ObjectId(req.body.id);
+            console.log(req.body.id);
+            const id = new mongoose.Types.ObjectId(req.params.id);
             const user = await userModel.findById(id);
             if(user){
                 res.status(200).json(user);
