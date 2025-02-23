@@ -11,7 +11,7 @@ Signups is for end users to register themselves with name, mail , password and r
 
 ### Every Controller, Model, Middleware and Validation is obtained from the index file of those folders
 
-![Folder Structure](./Folder_Structure.jpg)
+![Folder Structure](./Folder_Structure.jpeg)
 
 # ENV files
 
