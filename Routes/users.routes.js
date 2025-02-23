@@ -4,6 +4,7 @@ const indexController = require('../Controllers/index.controller');
 const usersController = indexController.user;
 const indexMiddleware = require('../Middleware/index.middleware');
 const verifyTokenMiddleware = indexMiddleware.verifyToken;
+const verifyAdminMiddleware = indexMiddleware.verifyAdmin;
 
 // Protect all routes with verifyTokenMiddleware
 router.use(verifyTokenMiddleware);
@@ -57,7 +58,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete a User
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', verifyAdminMiddleware ,async (req, res) => {
     try {
         const deletedUser = await usersController.deleteUser(req.params.id);
         if (deletedUser) {
