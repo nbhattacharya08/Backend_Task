@@ -4,7 +4,7 @@
   "description": "Backend Task for Intern",
   "main": "app.js",
   "scripts": {
-    "test": "npm test",
+    "test": "echo \"No test cases defined\"",
     "start": "nodemon app.js"
   },
   "repository": {
