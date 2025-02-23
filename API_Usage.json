@@ -1,0 +1,174 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "CRUD application",
+    "collectionId": "285efda8-0b4b-4c32-a561-a45418c32066",
+    "dateExported": "2025-02-23T13:17:38.144Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "be950d67-cb63-442d-af43-8001ef4e8ae6",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Signup User",
+            "url": "http://localhost:3000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-23T12:58:12.054Z",
+            "modified": "2025-02-23T12:58:12.054Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nilanjan Bhattacharya\",\n  \"email\":\"nilanjanbhattacharya22@gmail.com\",\n  \"password\":\"my-test-password\",\n  \"role\":\"user\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0b84fb50-9569-4499-81c7-a61719d98b28",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Signup Admin",
+            "url": "http://localhost:3000/api/auth/signup",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-23T12:58:22.641Z",
+            "modified": "2025-02-23T12:58:22.641Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nilanjan Bhattacharya\",\n  \"email\":\"nilanjanbhattacharya2003@gmail.com\",\n  \"password\":\"my-test-password\",\n  \"role\":\"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c858d84f-8c8b-4a0a-aa60-a5847401dcc5",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Login User",
+            "url": "http://localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-23T12:58:34.141Z",
+            "modified": "2025-02-23T12:58:34.141Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"nilanjanbhattacharya22@gmail.com\",\n  \"password\": \"my-test-password\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6fde9e6a-ffc2-4c3f-8184-9c982c387a88",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Login Admin",
+            "url": "http://localhost:3000/api/auth/login",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2025-02-23T12:58:53.895Z",
+            "modified": "2025-02-23T12:58:53.895Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\":\"nilanjanbhattacharya2003@gmail.com\",\n  \"password\": \"my-test-password\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "45e095a3-597f-48e6-a717-18801ebfc34a",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Create",
+            "url": "http://localhost:3000/api/users",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-02-23T13:01:56.942Z",
+            "modified": "2025-02-23T13:01:56.942Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjk4YTNjYTRkY2UwOTk2NDQwNjY2NSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTc0MDIxNzA0NiwiZXhwIjoxNzQwMzAzNDQ2fQ.BtyEsdEvVnNQK7UU6tHLb_G16UGCnrJdo228DWEIpFY"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nilanjan\",\n  \"email\":\"abc@gmail.com\",\n  \"role\":\"user\",\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9fc00b5e-8b13-4301-a67e-3c3c007e3c74",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Read One",
+            "url": "http://localhost:3000/api/users/67bad491929d8bc884051886",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-02-23T13:16:28.216Z",
+            "modified": "2025-02-23T13:16:28.216Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjk4YTNjYTRkY2UwOTk2NDQwNjY2NSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTc0MDI5NjExMCwiZXhwIjoxNzQwMzgyNTEwfQ.socXOUYWc52ivquO-iv3fvM0a45fcVxSKubGk1MdXYg"
+                }
+            ]
+        },
+        {
+            "_id": "b92e9a11-9032-47f8-b879-2ad075f8444d",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Read All",
+            "url": "http://localhost:3000/api/users",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2025-02-23T13:16:36.434Z",
+            "modified": "2025-02-23T13:16:36.434Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjk4YTNjYTRkY2UwOTk2NDQwNjY2NSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTc0MDI5NjExMCwiZXhwIjoxNzQwMzgyNTEwfQ.socXOUYWc52ivquO-iv3fvM0a45fcVxSKubGk1MdXYg"
+                }
+            ]
+        },
+        {
+            "_id": "c68962a0-72c1-4b46-a6ac-d71dcfccfdc9",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Update",
+            "url": "http://localhost:3000/api/users/67bad491929d8bc884051886",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2025-02-23T13:16:49.374Z",
+            "modified": "2025-02-23T13:16:49.374Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3Yjk4YTNjYTRkY2UwOTk2NDQwNjY2NSIsImVtYWlsIjoiYWJjQGdtYWlsLmNvbSIsImlhdCI6MTc0MDI5NjExMCwiZXhwIjoxNzQwMzgyNTEwfQ.socXOUYWc52ivquO-iv3fvM0a45fcVxSKubGk1MdXYg"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Bilanjan Nhattacharya\",\n  \"email\": \"abc@gmail.com\",\n  \"role\": \"user\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "42d54f87-a9c9-4fc8-94e9-5fd33f1a7908",
+            "colId": "285efda8-0b4b-4c32-a561-a45418c32066",
+            "containerId": "",
+            "name": "Delete",
+            "url": "http://localhost:3000/api/users/67ba28b7e22d708e30028fb7",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2025-02-23T13:16:58.660Z",
+            "modified": "2025-02-23T13:16:58.660Z",
+            "headers": [
+                {
+                    "name": "auth-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YmFkMTZhYzc3MjI2MDI3MmRmYTgxZCIsImVtYWlsIjoibmlsYW5qYW5iaGF0dGFjaGFyeWEyMDAzQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0MDI5Njg0MSwiZXhwIjoxNzQwMzgzMjQxfQ.CnCRkXW7pv2EhpctL8Cjpz7Tn5w5t4J4Uftr1a6YTXQ"
+                }
+            ]
+        }
+    ],
+    "ref": "5525UzU1VGnPANphxaIpTMCKQi-OghK2gt8KC_LqY0TCmf0y2E5aNOq23H78ZOaGTkMvXatgaBSFeOSeQhG_zg"
+}
